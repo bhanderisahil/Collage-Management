@@ -1,0 +1,93 @@
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: 'Lato', sans-serif;
+        color: #000;
+    }
+
+    .student-profile .card {
+        border-radius: 10px;
+    }
+
+    .student-profile .card .card-header .profile_img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin: 10px auto;
+        border: 10px solid #ccc;
+        border-radius: 50%;
+    }
+
+    .student-profile .card h3 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .student-profile .card p {
+        font-size: 16px;
+        color: #000;
+    }
+
+    .student-profile .table th,
+    .student-profile .table td {
+        font-size: 14px;
+        padding: 5px 10px;
+        color: #000;
+    }
+</style>
+
+
+<link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> 
+<!-- Student Profile -->
+<div class="student-profile py-4" style="display: flex; justify-content: center; align-items: center; text-align: center;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-transparent text-center">
+                        <h3><%= alldata.name %></h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-0"><strong class="pr-1">Student ID : </strong>321000001</p>
+                        <p class="mb-0"><strong class="pr-1">DOB : </strong><%= alldata.date %></p>
+                        <p class="mb-0"><strong class="pr-1">EMAIL : </strong><%= alldata.email %></p>
+                        <p class="mb-0"><strong class="pr-1">PHONE : </strong><%= alldata.phone %></p>
+                        <p class="mb-0"><strong class="pr-1">CITY : </strong><%= alldata.city %></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-transparent border-2">
+                        <h3 class="mt-0"><i class="far fa-clone pr-1"></i>YOUR  CORSE INFORMATION</h3>  
+                    </div>
+                    <div class="card-body pt-0">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th width="30%">CORSE NAME</th>
+                                <td width="2%">:</td>
+                                <td><%= corsdata.name %></td>
+                            </tr>
+                            <tr>
+                                <th width="30%">CORSE TIME </th>
+                                <td width="2%">:</td>
+                                <td><%= corsdata.time %></td>
+                            </tr>
+                            <tr>
+                                <th width="30%">CORSE FEES</th>
+                                <td width="2%">:</td>
+                                <td><%= corsdata.fees %></td>
+                            </tr>
+                            <tr>
+                                <th width="30%">PROFESSER NAME</th>
+                                <td width="2%">:</td>
+                                <td><%= corsdata.professer %></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
