@@ -1,7 +1,22 @@
 const express = require('express');
 app = express();
 const port  = 7000;
-require("./config/coonection")
+// require("./config/coonection")
+const mongoose = require('mongoose');
+
+mongoose.connect("mongodb+srv://bhanderisahil:sahil%40123@cluster0.vttnglj.mongodb.net/collage",{
+    useNewUrlParser : true,
+    useUnifiedTopology : true
+}).then(()=>{
+    console.log("coonection successful");
+}).catch((err)=>{
+    console.log("connection failed",err);
+})
+
+
+
+
+
 var cookieParser = require('cookie-parser')
 
 const adminrouter = require("./router/adminrouter")
