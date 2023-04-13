@@ -13,6 +13,7 @@ const { default: mongoose } = require("mongoose");
     confirmpassword : {
         type : String,
     },
+ 
  })
 
  const admin = mongoose.model("admin",adminscema);

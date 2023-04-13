@@ -1,6 +1,11 @@
 const { default: mongoose } = require("mongoose");
 
  const staffscema = mongoose.Schema({
+    CorseId : {
+        type : mongoose.Schema.Types.ObjectId,
+        ref : 'corse',
+        require : true
+    },
     name : {
         type : String,
     },
@@ -16,6 +21,10 @@ const { default: mongoose } = require("mongoose");
     employeetype : {
         type : String,
     },
+    isactive :{
+        type : Number,
+        required : true
+    }
    
  })
 

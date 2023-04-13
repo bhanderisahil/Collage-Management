@@ -209,10 +209,14 @@
     <div class="table-responsive">
         <div class="table-wrapper">
             <div class="table-title">
-                <div class="row">
+                <div class="row justify-content-between">
                     <div class="col-sm-5">
                         <h2>POPULAR <b>CORSES</b></h2>
                     </div>
+                    <form>
+                        <input type="text" name="search">
+                        <input type="submit" value="searching">
+                    </form> 
                     <div class="col-sm-7">
 
 
@@ -226,20 +230,16 @@
                         <th scope="col">name</th>
                         <th scope="col">time</th>
                         <th scope="col">fees</th>
-                        <th scope="col">professer</th>
+                        <th scope="col">Corse Detailes</th>
                     </tr>
                 </thead>
                 <tbody>
-               
-                            <% var no =1;  for(var s of alldata){ %>
+                            <% var no =1;  for(var s of adminRecord){ %>
                                 <tr>
-
-
                                     <th scope="row"><%= no++ %></th>
 
-                                    <td><a href="/view_profile/<%= s.id %>">
-                                            <%= s.name %>
-                                        </a></td>
+                                    <td>
+                                         <%= s.name %>                                     
                                     <td>
                                         <%= s.time %>
                                     </td>
@@ -247,14 +247,22 @@
                                         <%= s.fees %>
                                     </td>
                                     <td>
-                                        <%= s.professer %>
+                                        <%= s.corse_detailes %>
                                     </td>
 
                                 </tr>
                                 <% } %>
                 </tbody>
             </table>
-
+            <tr>
+                <td colspan="5" class="pager">
+                    <a href="?page=<%= prev %>&search=<%= searchData %>">Previous</a>
+                    <a href="?page=<%= currentPage %>&search=<%= searchData %>">
+                        <%= currentPage %>
+                    </a>
+                    <a href="?page=<%= next %>&search=<%= searchData %>">Next</a>
+                </td>
+            </tr>
         </div>
     </div>
 </div>

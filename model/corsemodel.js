@@ -10,7 +10,7 @@ const { default: mongoose } = require("mongoose");
     fees : {
         type : String,
     },
-    professer : {
+    corse_detailes : {
         type : String,
     },
  })

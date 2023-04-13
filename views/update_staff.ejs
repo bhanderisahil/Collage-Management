@@ -127,25 +127,23 @@ select {
 	font-size: 16px;
 }
 </style>
-<form class="addEmployee"action="/addStaff" method="post" >
+<form class="addEmployee"action="/update_data" method="post" >
 	<h4 class="addEmployeeHeader">
 		Staff Information
 	</h4>
 	<br>
+    <input type="hidden" name="editid" value="<%=finddata.id %>">
 	<label>First Name</label>
-	<input type="text" name="firstName">
+	<input type="text" name="firstName" value="<%=finddata.name %>">
 	<br>
 	<label>Last Name</label>
-	<input type="text" name="lastName">
+	<input type="text" name="lastName" value="<%=finddata.name %>   ">
 	<br>
 	<label>email</label>
-	<input type="text" name="email">
-	<br>
-    <label>Password</label>
-	<input type="text" name="password">
+	<input type="text" name="email" value="<%=finddata.email %>">
 	<br>
 	<label>Phone Number</label>
-	<input type="text" name="phone">
+	<input type="text" name="phone"  value="<%=finddata.phone %>">
 	<br>
 	<label>Employee Type</label>
 	<select name="CorseId" id="">

@@ -1,9 +1,14 @@
 const { default: mongoose, Mongoose } = require("mongoose");
 
 const studdata = mongoose.Schema({
-    // corse_id: {
-    //     type: mongoose.Schema.Types.ObjectId
-    // },
+    StaffId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref : 'staff'
+    },
+    CorseId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref : 'corse'
+    },
     name: {
         type: String,
     },
@@ -22,9 +27,13 @@ const studdata = mongoose.Schema({
     city: {
         type: String,
     },
-    corse: {
-        type: mongoose.Schema.Types.String, 
+    token :{
+        type: String,
+        default :" "
     }
+    // corse: {
+    //     type: mongoose.Schema.Types.String, 
+    // }
 
 })
 
